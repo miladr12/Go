@@ -21,12 +21,18 @@ public class Board
     }
   public void setField(x, y, c)
     {
-    if(c==o||c==1||c==2)
+    if(c==o || c==1 || c==2)
       {
+      system.out.println("invalid input")
+      system.out.println("valid inputs are")
       system.out.println("0 empty")
       system.out.println("1 black")
       system.out.println("2 white")
       }
-    board[a-1][b-1] = c;
+    else
+      {
+        board[a-1][b-1] = c;
+      }
+    
     }
   }
