@@ -4,14 +4,19 @@ public class Board
   private byte a;
   private byte b;
   
-  a = 12;
-  b = 12;
-  
-  while(a>0)
+  public Board()
     {
-    while(b>0)
+    a = 12;
+    b = 12;
+  
+    while(a>0)
       {
-      board[12-a][12-b] = 0;
+      while(b>0)
+        {
+        board[12-a][12-b] = 0;
+        b --;
+        }
+      a --;
       }
     }
   
