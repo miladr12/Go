@@ -1,0 +1,32 @@
+public class Board
+  {
+  private byte[12][12] board;
+  private byte a;
+  private byte b;
+  
+  a = 12;
+  b = 12;
+  
+  while(a>0)
+    {
+    while(b>0)
+      {
+      board[12-a][12-b] = 0;
+      }
+    }
+  
+  public byte getField(x, y)
+    {
+    return board[a-1][b-1];
+    }
+  public void setField(x, y, c)
+    {
+    if(c==o||c==1||c==2)
+      {
+      system.out.println("0 empty")
+      system.out.println("1 black")
+      system.out.println("2 white")
+      }
+    board[a-1][b-1] = c;
+    }
+  }
