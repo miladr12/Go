@@ -1,43 +1,51 @@
+
+/**
+ * Write a description of class Board here.
+ *
+ * @author milad
+ * @version 0.2
+ */
 public class Board
-  {
-  private byte[12][12] board;
-  private byte a;
-  private byte b;
-  
-  public Board()
     {
-    a = 12;
-    b = 12;
+    private byte[][] board;
+    private byte a;
+    private byte b;
   
-    while(a>0)
-      {
-      while(b>0)
+    public Board()
         {
-        board[12-a][12-b] = 0;
-        b --;
+        a = 12;
+        b = 12;
+        ;
+        
+        while(a>0)
+            {
+            while(b>0)
+                {
+                board[12-a][12-b] = 0;
+                b --;
+                }
+            a --;
+            }
         }
-      a --;
-      }
-    }
   
-  public byte getField(x, y)
-    {
-    return board[a-1][b-1];
+    public byte getField(byte x, byte y)
+        {
+        return board[x-1][y-1];
+        }
+        
+    public void setField(byte x, byte y, byte c)
+        {
+        if(!(c==0 || c==1 || c==2))
+            {
+            System.out.println("invalid input");
+            System.out.println("valid inputs are");
+            System.out.println("0 empty");
+            System.out.println("1 black");
+            System.out.println("2 white");
+            }
+            else
+                {
+                board[x-1][y-1] = c;
+                }
+        }
     }
-  public void setField(x, y, c)
-    {
-    if(c==o || c==1 || c==2)
-      {
-      system.out.println("invalid input")
-      system.out.println("valid inputs are")
-      system.out.println("0 empty")
-      system.out.println("1 black")
-      system.out.println("2 white")
-      }
-    else
-      {
-        board[a-1][b-1] = c;
-      }
-    
-    }
-  }
